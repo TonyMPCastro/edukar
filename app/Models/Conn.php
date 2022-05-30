@@ -4,7 +4,7 @@ namespace App\Models;
 
 if(!defined('4578S9')){
     header("Location: /");
-    die("Erro: 404!");
+    die("Erro: 404 -> Pagina Não Encontrada!");
 }
 
 use PDO;
