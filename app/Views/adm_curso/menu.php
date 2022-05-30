@@ -1,4 +1,3 @@
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -38,7 +37,7 @@
                 <span class="count bg-success"></span>
               </div>
               <div class="profile-name">
-                <h5 class="mb-0 font-weight-normal"><?php echo $_SESSION['usuario_nome']; ?></h5>
+                <h5 class="mb-0 font-weight-normal"><?php echo $_SESSION['usuario_nome'];?></h5>
                 <span>Gold Member</span>
               </div>
             </div>
@@ -85,18 +84,18 @@
           <span class="nav-link">Navigation</span>
         </li>
 
-        <?php foreach ($menu as $item) {  ?>
+        <?php foreach($menu as $item){  ?>
 
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="<?php echo URL . $item['comandoUrl']; ?>">
-              <span class="menu-icon">
-                <i class="<?php echo $item['ico']; ?>"></i>
-              </span>
-              <span class="menu-title"><?php echo $item['nome']; ?></span>
-            </a>
-          </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="<?php echo URL . $item['comandoUrl'];?>">
+            <span class="menu-icon">
+              <i class="<?php echo $item['ico'];?>"></i>
+            </span>
+            <span class="menu-title"><?php echo $item['nome'];?></span>
+          </a>
+        </li>
 
-        <?php } ?>
+        <?php }?>
         <!-- <li class="nav-item menu-items">
           <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
             <span class="menu-icon">
@@ -179,7 +178,7 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo-mini" href="<?php echo URL . 'home/onShow' ?>"><img src="app/assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="<?php echo URL . 'home/onShow' ?>"><img src="<?php echo URL . 'app/assets/images/logo-mini.svg' ?>" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -194,7 +193,7 @@
           </ul>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown d-none d-lg-block">
-
+              
             </li>
             <li class="nav-item nav-settings d-none d-lg-block">
               <a class="nav-link" href="#">
@@ -211,7 +210,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                    <img src="app/assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
+                    <img src="<?php echo URL . 'app/assets/images/faces/face4.jpg'?>" alt="image" class="rounded-circle profile-pic">
                   </div>
                   <div class="preview-item-content">
                     <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
@@ -221,7 +220,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                    <img src="app/assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
+                    <img src="<?php echo URL . 'app/assets/images/faces/face2.jpg'?>" alt="image" class="rounded-circle profile-pic">
                   </div>
                   <div class="preview-item-content">
                     <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
@@ -231,7 +230,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                    <img src="app/assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
+                    <img src="<?php echo URL . 'app/assets/images/faces/face3.jpg'?>" alt="image" class="rounded-circle profile-pic">
                   </div>
                   <div class="preview-item-content">
                     <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
@@ -293,7 +292,7 @@
               <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                 <div class="navbar-profile">
                   <img class="img-xs rounded-circle" src="<?php echo URL . 'app/assets/images/faces/face15.jpg'; ?>" alt="">
-                  <p class="mb-0 d-none d-sm-block navbar-profile-name"><?php echo $_SESSION['usuario_nome']; ?></p>
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name"><?php echo $_SESSION['usuario_nome'];?></p>
                   <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
               </a>
