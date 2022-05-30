@@ -58,7 +58,7 @@ class ConfigController
     }
     
     private function config() {
-        define('URL', 'http://localhost/p3_banco_de_dados/');
+        define('URL', 'http://localhost/edukar/');
     }
 
 }
