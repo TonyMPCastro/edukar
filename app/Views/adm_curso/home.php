@@ -1,11 +1,27 @@
 <?php
 
 if (!defined('4578S9')) {
-  header("Location: /");
-  die("Erro: Página não encontrada!");
+    header("Location: /");
+    die("Erro: Página não encontrada!");
 }
 if (isset($this->dados['menu'])) {
-  $menu = $this->dados['menu'];
+    $menu = $this->dados['menu'];
+}
+
+if (isset($this->dados['countCursos'])) {
+    $countCursos = $this->dados['countCursos'];
+}
+
+if (isset($this->dados['countUsers'])) {
+    $countUsers = $this->dados['countUsers'];
+}
+
+if (isset($this->dados['countCc'])) {
+    $countCc = $this->dados['countCc'];
+}
+
+if (isset($this->dados['countCert'])) {
+    $countCert = $this->dados['countCert'];
 }
 ?>
 
@@ -15,7 +31,7 @@ if (isset($this->dados['menu'])) {
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12 grid-margin stretch-card">
                 <div class="card corona-gradient-card">
                     <div class="card-body py-0 px-0 px-sm-3">
@@ -36,25 +52,26 @@ if (isset($this->dados['menu'])) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-9">
+                                <h4 class="text-muted font-weight-normal">QTN CURSOS</h4>
                                 <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$12.34</h3>
-                                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                                    <h3 class="mb-0"> <?php echo $countCursos[0]; ?></h3>
+                                    <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p> -->
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <span class="mdi mdi-certificate"></span>
                                 </div>
                             </div>
                         </div>
-                        <h6 class="text-muted font-weight-normal">Potential growth</h6>
+
                     </div>
                 </div>
             </div>
@@ -63,58 +80,58 @@ if (isset($this->dados['menu'])) {
                     <div class="card-body">
                         <div class="row">
                             <div class="col-9">
+                                <h4 class="text-muted font-weight-normal">QTN Alunos</h4>
                                 <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$17.34</h3>
-                                    <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="icon icon-box-success">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">Revenue current</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$12.34</h3>
-                                    <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="icon icon-box-danger">
-                                    <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">Daily Income</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$31.53</h3>
-                                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                                    <h3 class="mb-0"> <?php echo $countUsers[0]; ?></h3>
+                                    <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p> -->
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <span class="mdi mdi-account-group-outline"></span>
                                 </div>
                             </div>
                         </div>
-                        <h6 class="text-muted font-weight-normal">Expense current</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-9">
+                                <h4 class="text-muted font-weight-normal">QTN Concluidos</h4>
+                                <div class="d-flex align-items-center align-self-start">
+                                    <h3 class="mb-0"> <?php echo $countCc[0]; ?></h3>
+                                    <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p> -->
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-check-decagram"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-9">
+                                <h4 class="text-muted font-weight-normal">QTN Certificados</h4>
+                                <div class="d-flex align-items-center align-self-start">
+                                    <h3 class="mb-0"> <?php echo $countCert[0]; ?></h3>
+                                    <p class="text-success ml-2 mb-0 font-weight-medium" style="font-size:24 !important;"><?php echo ((($countCc[0] - $countCert[0]) / $countCc[0]) * 100); ?>%</p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-file-pdf-outline"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

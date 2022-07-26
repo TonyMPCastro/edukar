@@ -7,6 +7,10 @@ if (!defined('4578S9')) {
 if (isset($this->dados['menu'])) {
     $menu = $this->dados['menu'];
 }
+
+if (isset($this->dados['cursos'])) {
+    $cursos = $this->dados['cursos'];
+}
 ?>
 <?php include "menu.php"; ?>
 
@@ -16,107 +20,61 @@ if (isset($this->dados['menu'])) {
     <div class="content-wrapper">
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
-                <div class="card corona-gradient-card">
-                    <div class="card-body py-0 px-0 px-sm-3">
-                        <div class="row align-items-center">
-                            <div class="col-4 col-sm-3 col-xl-2">
-                                <img src="app/assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
-                            </div>
-                            <div class="col-5 col-sm-7 col-xl-8 p-0">
-                                <h4 class="mb-1 mb-sm-0">Quer ainda mais recursos?</h4>
-                                <p class="mb-0 font-weight-normal d-none d-sm-block">Confira nossa versão Pro...</p>
-                            </div>
-                            <div class="col-3 col-sm-2 col-xl-2 pl-0 text-center">
-                                <span>
-                                    <a href="#" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Upgrade</a>
-                                </span>
-                            </div>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h1>MEUS CURSOS</h1>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$12.34</h3>
-                                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">Potential growth</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$17.34</h3>
-                                    <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="icon icon-box-success">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+
+            <?php $cont = 0; foreach ($cursos as $curso) { ?>
+
+                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+
+
+                                
+
+                                        <div class="card">
+      
+                                               <a href="<?php echo URL . "aluno/curso?id=" . $curso['id_curso']; ?>"> <h5 class="mb-0 text-justify"> <?php echo $curso['nome_curso']; ?></h5> </a>
+
+                                            <div id="collapseGa<?php echo $curso['id_curso']; ?>"  aria-labelledby="heading22" data-parent="#accordian-3">
+                                                <div class="card-body alert  text-justify" style="font-family: arial; color: black; font-size: 14;">
+                                                    <p style="font-size: 6;"><span style="color: blue;"><b><?php echo $curso['progresso']; ?>% COMPLETE</b></span> <span style="color: white;"><?php echo $curso['progresso']; ?>/100 Steps </span></p>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: <?php echo $curso['progresso']; ?>%;" aria-valuenow="<?php echo $curso['progresso']; ?>" aria-valuemin="0" aria-valuemax="100"><?php echo $curso['progresso']; ?>%</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="badge badge-pill badge-primary"><?php echo $curso['status']; ?></div>
+                                        </div>
+
+
+                            
                                 </div>
                             </div>
                         </div>
-                        <h6 class="text-muted font-weight-normal">Revenue current</h6>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$12.34</h3>
-                                    <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="icon icon-box-danger">
-                                    <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">Daily Income</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="d-flex align-items-center align-self-start">
-                                    <h3 class="mb-0">$31.53</h3>
-                                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">Expense current</h6>
-                    </div>
-                </div>
-            </div>
+            <?php
+                $cont++;
+            }
+
+            if ($cont == 0) {
+            ?>
+                <tr>
+                    <td colspan="5" style="text-align: center;"><?php echo "NENHUM REGISTRO ENCONTRADO" ?></td>
+                </tr>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </div>

@@ -21,7 +21,7 @@ class Login
             $visualizarLogin->login($this->dados);
             if($visualizarLogin->getResultado()){
 
-                if( $_SESSION['tipouser'] == 2){
+                if( $_SESSION['tipo_user'] == 2){
 
                     $urlDestino = URL . "aluno/index";
                 }else{

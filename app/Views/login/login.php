@@ -15,8 +15,7 @@ if (isset($this->dados['form'])) {
 
 
 
-<!DOCTYPE html>
-<html>
+
 
 <head>
     <meta charset="utf-8">
@@ -39,7 +38,7 @@ if (isset($this->dados['form'])) {
     </style>
 </head>
 
-<body>
+
     <section class="hero is-success is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
@@ -88,9 +87,9 @@ if (isset($this->dados['form'])) {
             </div>
         </div>
     </section>
-</body>
 
-</html>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>

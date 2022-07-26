@@ -37,12 +37,12 @@ class Permissao
     
     private function pgRestrita(): void {
 
-        if( $_SESSION['tipouser'] == 2){
+        if( $_SESSION['tipo_user'] == 2){
 
-            $this->pgRestrita = ["aluno"];
+            $this->pgRestrita = ["aluno","curso?id=10"];
         }else{
 
-            $this->pgRestrita = ["home", "adm_curso"];
+            $this->pgRestrita = ["home", "adm_curso","curso_adm"];
         }
 
         

@@ -10,7 +10,7 @@ if(!defined('4578S9')){
 class Sair
 {
     public function index() {
-        unset($_SESSION['usuario_id'], $_SESSION['usuario_nome'], $_SESSION['usuario_email'], $_SESSION['tipouser']);
+        unset($_SESSION['usuario_id'], $_SESSION['usuario_nome'], $_SESSION['usuario_email'], $_SESSION['tipo_user']);
         $urlDestino = URL . 'login/index';
         session_destroy();
         header("Location: $urlDestino");

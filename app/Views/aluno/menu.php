@@ -87,11 +87,11 @@
         <?php foreach($menu as $item){  ?>
 
         <li class="nav-item menu-items">
-          <a class="nav-link" href="<?php echo URL . $item['comandoUrl'];?>">
+          <a class="nav-link" href="<?php echo URL . $item['url'];?>">
             <span class="menu-icon">
-              <i class="<?php echo $item['ico'];?>"></i>
+              <i class="<?php echo $item['icon'];?>"></i>
             </span>
-            <span class="menu-title"><?php echo $item['nome'];?></span>
+            <span class="menu-title"><?php echo $item['menu_item'];?></span>
           </a>
         </li>
 

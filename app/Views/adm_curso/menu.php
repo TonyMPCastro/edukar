@@ -12,8 +12,13 @@
   <link rel="stylesheet" href="<?php echo URL . 'app/assets/vendors/owl-carousel-2/owl.carousel.min.css'; ?>">
   <link rel="stylesheet" href="<?php echo URL . 'app/assets/vendors/owl-carousel-2/owl.theme.default.min.css'; ?>">
   <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <!-- endinject -->
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL . 'script.js'?>"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
   <!-- Layout styles -->
   <link rel="stylesheet" href="<?php echo URL . 'app/assets/css/style.css'; ?>">
   <!-- End layout styles -->
@@ -87,11 +92,11 @@
         <?php foreach($menu as $item){  ?>
 
         <li class="nav-item menu-items">
-          <a class="nav-link" href="<?php echo URL . $item['comandoUrl'];?>">
+          <a class="nav-link" href="<?php echo URL . $item['url'];?>">
             <span class="menu-icon">
-              <i class="<?php echo $item['ico'];?>"></i>
+              <i class="<?php echo $item['icon'];?>"></i>
             </span>
-            <span class="menu-title"><?php echo $item['nome'];?></span>
+            <span class="menu-title"><?php echo $item['menu_item'];?></span>
           </a>
         </li>
 
@@ -268,7 +273,7 @@
                     </div>
                   </div>
                   <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Settings</p>
+                    <p class="preview-subject mb-1">Configurações</p>
                     <p class="text-muted ellipsis mb-0"> Update dashboard </p>
                   </div>
                 </a>
@@ -306,7 +311,7 @@
                     </div>
                   </div>
                   <div class="preview-item-content">
-                    <p class="preview-subject mb-1">Settings</p>
+                    <p class="preview-subject mb-1">Configurações</p>
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
@@ -320,9 +325,7 @@
                     <p class="preview-subject mb-1">Sair</p>
                   </div>
                 </a>
-                <div class="dropdown-divider"></div>
-                <p class="p-3 mb-0 text-center">Advanced settings</p>
-              </div>
+             
             </li>
           </ul>
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">

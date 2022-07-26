@@ -54,6 +54,31 @@ class ConfigController
         if($this->urlMetodo == "onShow"){
             $classeCarregar->onShow();  
           }
+
+          
+          if($this->urlMetodo == "onInsert"){
+            $classeCarregar->onInsert();  
+          }
+
+          if($this->urlMetodo == "onDelete"){
+            $classeCarregar->onDelete();  
+          }
+
+          if($this->urlMetodo == "onEdit"){
+            $classeCarregar->onEdit();  
+          }
+
+          if($this->urlMetodo == "onUpdate"){
+            $classeCarregar->onUpdate();  
+          }
+
+          if($this->urlMetodo == "curso"){
+            $classeCarregar->curso();  
+          }
+
+          
+          
+          
         
     }
     

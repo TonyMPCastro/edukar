@@ -8,6 +8,7 @@ if(!defined('4578S9')){
 }
 
 use PDO;
+use PDOException;
 
 class Conn
 {
@@ -19,9 +20,16 @@ class Conn
     public object $connect;
     
     protected function connect() {
-       
-            $this->connect = new PDO($this->db . ':host=' . $this->host . ';dbname=' . $this->dbname, $this->user, $this->pass);
+        try {
+
+             $this->connect = new PDO($this->db . ':host=' . $this->host . ';dbname=' . $this->dbname, $this->user, $this->pass);
             return $this->connect;
        
+            } catch (PDOException $e) {
+        echo $e->getMessage();
+        }
+           
     }
 }
+
+
