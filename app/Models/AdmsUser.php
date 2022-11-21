@@ -21,7 +21,7 @@ class AdmsUser extends Conn
         $this->conn = $this->connect();
         $query_val_login = "SELECT *
                 FROM menu_item
-                WHERE tipo_user =:id";
+                WHERE tipo_user_id =:id";
         $result_val_login = $this->conn->prepare($query_val_login);
         $result_val_login->bindParam(":id", $this->dados['id'], PDO::PARAM_STR);
         $result_val_login->execute();

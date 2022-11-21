@@ -78,7 +78,7 @@ class ConfigController
     }
     
     private function config() {
-        define('URL', 'http://localhost/edukar/');
+        define('URL', 'http://localhost/projeto_pds/');
     }
 
 }

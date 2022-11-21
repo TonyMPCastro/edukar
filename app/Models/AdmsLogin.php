@@ -23,7 +23,7 @@ class AdmsLogin extends Conn
     public function login(array $dados = null) {
         $this->dados = $dados;
         $this->conn = $this->connect();
-        $query_val_login = "SELECT id_user, nome_user, email, senha,tipo_user
+        $query_val_login = "SELECT id_user, nome_user, email, senha,tipo_user_id
                 FROM user
                 WHERE email =:email and senha = md5(:senha) LIMIT 1";
         $result_val_login = $this->conn->prepare($query_val_login);
@@ -43,7 +43,7 @@ class AdmsLogin extends Conn
     }
 
     private function validar() {
-            $_SESSION['tipo_user'] = $this->resultadoBd['tipo_user'];
+            $_SESSION['tipo_user'] = $this->resultadoBd['tipo_user_id'];
             $_SESSION['usuario_id'] = $this->resultadoBd['id_user'];
             $_SESSION['usuario_nome'] = $this->resultadoBd['nome_user'];
             $_SESSION['usuario_email'] = $this->resultadoBd['email'];
