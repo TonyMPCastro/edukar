@@ -7,11 +7,6 @@ if(!defined('4578S9')){
     die("Erro: Página não encontrada!");
 }
 
-/**
- * Description of ConfigController
- *
- * @author Celke
- */
 class ConfigController
 {
 

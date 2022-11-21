@@ -7,11 +7,6 @@ if(!defined('4578S9')){
     die("Erro: Página não encontrada!");
 }
 
-/**
- * Description of Permissao
- *
- * @author Celke
- */
 class Permissao
 {
     private string $urlController;
@@ -39,7 +34,7 @@ class Permissao
 
         if( $_SESSION['tipo_user'] == 2){
 
-            $this->pgRestrita = ["aluno","curso?id=10"];
+            $this->pgRestrita = ["aluno","curso"];
         }else{
 
             $this->pgRestrita = ["home", "adm_curso","curso_adm"];
